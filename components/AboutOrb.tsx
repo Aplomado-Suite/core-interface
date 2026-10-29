@@ -24,9 +24,7 @@ export default function AboutOrb() {
   return (
     <div className="w-48 h-48 sm:w-64 sm:h-64 mx-auto mb-6 relative">
       <Canvas camera={{ position: [0, 0, 3], fov: 75 }}>
-        {/* @ts-expect-error r3f types not compatible with React 19 */}
         <ambientLight intensity={0.5} />
-        {/* @ts-expect-error r3f types not compatible with React 19 */}
         <pointLight position={[10, 10, 10]} intensity={1} />
         <FloatingSphere />
         <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={2} />
