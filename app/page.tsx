@@ -33,12 +33,12 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-oatmeal-50 overflow-hidden">
+    <div className="min-h-screen bg-[#050510] overflow-hidden">
       {/* 3D Background */}
       <Scene3D />
 
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-oatmeal-50/80 backdrop-blur-xl border-b border-oatmeal-200">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#050510]/80 backdrop-blur-2xl border-b border-white/5">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-4 sm:py-5 flex items-center justify-between">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -46,16 +46,16 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="flex items-center gap-3 sm:gap-4"
           >
-            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-accent-600 to-accent-400 flex items-center justify-center shadow-lg">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-sky-400 to-blue-600 flex items-center justify-center shadow-lg shadow-sky-500/25">
               <svg className="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
               </svg>
             </div>
             <div>
-              <span className="text-xl sm:text-2xl font-bold text-oatmeal-900 tracking-tight block font-display">
+              <span className="text-xl sm:text-2xl font-bold text-white tracking-tight block font-display">
                 Aplomado
               </span>
-              <span className="text-[10px] sm:text-xs text-oatmeal-400 tracking-[0.2em] uppercase font-mono">
+              <span className="text-[10px] sm:text-xs text-slate-400 tracking-[0.25em] uppercase font-mono">
                 Suite
               </span>
             </div>
@@ -67,10 +67,10 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex items-center gap-4 sm:gap-6"
           >
-            <a href="#features" className="hidden sm:block text-sm font-medium text-oatmeal-500 hover:text-oatmeal-900 transition-colors duration-300">
+            <a href="#features"               className="hidden sm:block text-sm font-medium text-slate-400 hover:text-white transition-colors duration-300">
               Features
             </a>
-            <a href="#about" className="hidden sm:block text-sm font-medium text-oatmeal-500 hover:text-oatmeal-900 transition-colors duration-300">
+            <a href="#about"               className="hidden sm:block text-sm font-medium text-slate-400 hover:text-white transition-colors duration-300">
               About
             </a>
             <a 
@@ -121,11 +121,11 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 sm:mb-8 tracking-tight leading-tight text-oatmeal-900 font-display"
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 sm:mb-8 tracking-tight leading-tight text-white font-display"
             >
               Work Without
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-600 to-accent-400 animate-gradient-x">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-400">
                 Surveillance
               </span>
             </motion.h1>
@@ -135,7 +135,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-lg sm:text-xl md:text-2xl text-oatmeal-500 max-w-4xl mx-auto mb-10 sm:mb-12 leading-relaxed font-light"
+              className="text-lg sm:text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-10 sm:mb-12 leading-relaxed font-light"
             >
               The Aplomado Suite gives you complete sovereignty over your digital workspace.
               Your data stays on your machine. No cloud storage. No tracking. No compromise.
@@ -150,9 +150,9 @@ export default function Home() {
             >
               <button
                 onClick={() => setShowAuthModal(true)}
-                className="group w-full sm:w-auto px-8 sm:px-10 py-4 rounded-xl bg-gradient-to-r from-accent-600 to-accent-500 hover:from-accent-500 hover:to-accent-400
+                className="group w-full sm:w-auto px-8 sm:px-10 py-4 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500
                   text-white font-semibold text-lg transition-all duration-300
-                  shadow-lg hover:shadow-xl hover:shadow-accent-500/30
+                  shadow-lg shadow-sky-500/25 hover:shadow-xl hover:shadow-sky-500/40
                   hover:-translate-y-1 hover:scale-105
                   flex items-center justify-center gap-3"
               >
@@ -168,9 +168,9 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="group w-full sm:w-auto px-8 sm:px-10 py-4 rounded-xl border-2 border-oatmeal-200 hover:border-oatmeal-900
-                text-oatmeal-900 font-semibold text-lg transition-all duration-300
-                hover:bg-white hover:shadow-lg hover:-translate-y-1
+              className="w-full sm:w-auto px-8 sm:px-10 py-4 rounded-xl border border-white/10 hover:border-sky-400/50
+                text-white font-semibold text-lg transition-all duration-300
+                hover:bg-white/5 hover:shadow-lg hover:shadow-sky-500/10 hover:-translate-y-1
                 flex items-center justify-center gap-3"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
