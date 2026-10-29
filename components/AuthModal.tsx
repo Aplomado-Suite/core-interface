@@ -43,40 +43,33 @@ export default function AuthModal({ onLogin, onClose }: AuthModalProps) {
   }
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-oatmeal-900/50 backdrop-blur-md z-50 p-4 sm:p-6">
-      <div className="bg-white rounded-2xl sm:rounded-3xl border border-oatmeal-200 p-8 sm:p-10 w-full max-w-md relative
-        shadow-2xl shadow-oatmeal-900/10">
-        {/* Close button */}
+    <div className="fixed inset-0 flex items-center justify-center bg-black/80 backdrop-blur-xl z-50 p-4">
+      <div className="bg-[#0a0a14] rounded-3xl border border-white/10 p-8 sm:p-10 w-full max-w-md relative shadow-2xl">
         <button
           onClick={onClose}
-          className="absolute top-4 sm:top-5 right-4 sm:right-5 text-oatmeal-400 hover:text-oatmeal-900
-            transition-colors text-2xl w-8 h-8 flex items-center justify-center rounded-lg
-            hover:bg-oatmeal-100 hover:scale-110 transition-all duration-300"
+          className="absolute top-5 right-5 text-slate-400 hover:text-white transition-colors text-2xl w-8 h-8 flex items-center justify-center rounded-lg hover:bg-white/5"
           aria-label="Close"
         >
           ×
         </button>
 
-        {/* Header */}
         <div className="text-center mb-8 sm:mb-10">
-          <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-accent-50 to-accent-100
-            flex items-center justify-center shadow-inner">
-            <svg className="w-8 h-8 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-sky-500/20 to-blue-500/20 border border-sky-500/20 flex items-center justify-center">
+            <svg className="w-8 h-8 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
             </svg>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-bold text-oatmeal-900 mb-2 font-display">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2 font-display">
             Welcome Back
           </h2>
-          <p className="text-oatmeal-500 font-light">
+          <p className="text-slate-400 font-light">
             Sign in to your sovereign workspace
           </p>
         </div>
 
-        {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
           <div>
-            <label htmlFor="username" className="block text-sm font-medium mb-2 sm:mb-3 text-oatmeal-600">
+            <label htmlFor="username" className="block text-sm font-medium mb-2 sm:mb-3 text-slate-300">
               Username
             </label>
             <input
@@ -84,18 +77,14 @@ export default function AuthModal({ onLogin, onClose }: AuthModalProps) {
               id="username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-oatmeal-50
-                border-2 border-oatmeal-200
-                text-oatmeal-900 placeholder-oatmeal-400
-                focus:outline-none focus:border-accent-500 focus:ring-4 focus:ring-accent-500/10
-                transition-all duration-300 hover:border-oatmeal-300"
+              className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 transition-all duration-300"
               placeholder="Enter your username"
               autoComplete="username"
             />
           </div>
 
           <div>
-            <label htmlFor="password" className="block text-sm font-medium mb-2 sm:mb-3 text-oatmeal-600">
+            <label htmlFor="password" className="block text-sm font-medium mb-2 sm:mb-3 text-slate-300">
               Password
             </label>
             <input
@@ -103,18 +92,14 @@ export default function AuthModal({ onLogin, onClose }: AuthModalProps) {
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-oatmeal-50
-                border-2 border-oatmeal-200
-                text-oatmeal-900 placeholder-oatmeal-400
-                focus:outline-none focus:border-accent-500 focus:ring-4 focus:ring-accent-500/10
-                transition-all duration-300 hover:border-oatmeal-300"
+              className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 transition-all duration-300"
               placeholder="Enter your password"
               autoComplete="current-password"
             />
           </div>
 
           <div>
-            <label htmlFor="apiKey" className="block text-sm font-medium mb-2 sm:mb-3 text-oatmeal-600">
+            <label htmlFor="apiKey" className="block text-sm font-medium mb-2 sm:mb-3 text-slate-300">
               API Key
             </label>
             <input
@@ -122,21 +107,17 @@ export default function AuthModal({ onLogin, onClose }: AuthModalProps) {
               id="apiKey"
               value={apiKey}
               onChange={(e) => setApiKey(e.target.value)}
-              className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-oatmeal-50
-                border-2 border-oatmeal-200
-                text-oatmeal-900 placeholder-oatmeal-400
-                focus:outline-none focus:border-accent-500 focus:ring-4 focus:ring-accent-500/10
-                transition-all duration-300 hover:border-oatmeal-300"
+              className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 transition-all duration-300"
               placeholder="Enter your API key"
               autoComplete="off"
             />
-            <p className="text-xs text-oatmeal-400 mt-2">
+            <p className="text-xs text-slate-500 mt-2">
               Contact TekPet Digital for your API key
             </p>
           </div>
 
           {error && (
-            <div className="p-3 sm:p-4 rounded-xl bg-red-50 border-2 border-red-200 text-red-600 text-sm">
+            <div className="p-3 sm:p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 text-sm">
               {error}
             </div>
           )}
@@ -144,14 +125,7 @@ export default function AuthModal({ onLogin, onClose }: AuthModalProps) {
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full py-3.5 sm:py-4 px-4 rounded-xl bg-gradient-to-r from-accent-600 to-accent-500
-              hover:from-accent-500 hover:to-accent-400
-              text-white font-semibold text-base sm:text-lg
-              transition-all duration-300
-              disabled:opacity-50 disabled:cursor-not-allowed
-              shadow-lg hover:shadow-xl hover:shadow-accent-500/30
-              hover:-translate-y-0.5 hover:scale-[1.02]
-              disabled:hover:translate-y-0 disabled:hover:scale-100"
+            className="w-full py-3.5 sm:py-4 px-4 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-semibold text-base sm:text-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-sky-500/25 hover:shadow-xl hover:shadow-sky-500/40"
           >
             {isLoading ? (
               <span className="flex items-center justify-center gap-2">
@@ -167,9 +141,8 @@ export default function AuthModal({ onLogin, onClose }: AuthModalProps) {
           </button>
         </form>
 
-        {/* Footer */}
-        <div className="mt-6 sm:mt-8 pt-6 border-t border-oatmeal-200 text-center">
-          <p className="text-sm text-oatmeal-400 flex items-center justify-center gap-2 font-light">
+        <div className="mt-6 sm:mt-8 pt-6 border-t border-white/5 text-center">
+          <p className="text-sm text-slate-500 flex items-center justify-center gap-2 font-light">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
             </svg>

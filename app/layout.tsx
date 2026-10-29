@@ -24,10 +24,26 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Aplomado Suite | Sovereign Workspace',
-  description: 'Work without surveillance. A privacy-first, local-only workspace suite with zero telemetry and complete data sovereignty. Built for the Aplomado Falcon philosophy.',
-  keywords: ['privacy', 'workspace', 'local-first', 'sovereign', 'zero-telemetry', 'open-source', 'aplomado', 'falcon'],
+  title: 'Aplomado Suite | Sovereign Workspace — Zero Telemetry, Local-First',
+  description: 'The Aplomado Suite gives you absolute sovereignty over your digital workspace. Zero telemetry, local-first storage, open source. Work without surveillance.',
+  keywords: ['privacy', 'workspace', 'local-first', 'sovereign', 'zero-telemetry', 'open-source', 'aplomado', 'falcon', 'webgl', 'micro-frontend'],
   authors: [{ name: 'Aplomado Suite' }],
+  openGraph: {
+    title: 'Aplomado Suite | Sovereign Workspace',
+    description: 'Work without surveillance. Zero telemetry. Local-first. Open source.',
+    type: 'website',
+    locale: 'en_GB',
+    siteName: 'Aplomado Suite',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Aplomado Suite | Sovereign Workspace',
+    description: 'Work without surveillance. Zero telemetry. Local-first. Open source.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export const viewport: Viewport = {
