@@ -19,4 +19,4 @@ If your organisation wishes to integrate this software into proprietary infrastr
 Our commercial licence completely waives the AGPL requirements and includes proprietary customisation rights.
 
 ### Contact Us
-To discuss commercial licensing terms, please contact our team at: **grolar+aplomado@protonmail.com**
+To discuss commercial licensing terms, please contact our team at: **grolarlabs+aplomado@protonmail.com**
